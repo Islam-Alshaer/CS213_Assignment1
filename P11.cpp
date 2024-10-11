@@ -53,7 +53,7 @@ void fileComparison() {
     else {
         cout << "There is an error in opening Files.\n"
         << "Please check if the files are exist.\n";
-        return; // REPLACE IT WITH BREAK IN THE MENU
+        return;
     }
 
     cout << "Choose between A for char or B for word:\n";
@@ -81,7 +81,7 @@ void fileComparison() {
             if(eof_1 != eof_2) {
                 cout << "Files are different in size.\n";
                 file1.close(), file2.close();
-                return; // REPLACE IT WITH BREAK IN THE MENU
+                return;
             }
         }
     }
