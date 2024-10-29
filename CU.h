@@ -5,11 +5,11 @@
 
 class CU {
 public:
-    void load(int indxReg, int indxMemory, Register& l, Memory& k);
-    void load(int indxReg, int val, Register& l);
-    void store(int indxReg, int indxMemory, Register& l, Memory& k);
-    void move(int indxReg1, int indxReg2, Register& k);
-    void jump(int indxReg, int indxMemory, Register& k, int & PC);
-    void halt();
+    void load(int indxReg, int indxMemory, Register& regist, Memory& memory);
+    void load(int indxReg, string val, Register& regist);
+    void store(int indxReg, int indxMemory, Register& regist, Memory& memory);
+    void move(int indxReg1, int indxReg2, Register& regist);
+    void jump(int indxReg, int indxMemory, Register& regist, int & PC);
+    void halt(Register& regist, Memory& memory, int& PC);
     bool isValid(std::string instruction);
 };
