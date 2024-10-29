@@ -23,8 +23,8 @@ map<char, string> hexAndDecMap = {
     {'F', "1111"}
 };
 
-int ALU::hexToDec(int indxReg, Register& k) {
-    string l = k.getCell(indxReg);
+int ALU::hexToDec(int indxReg, Register& regist) {
+    string l = regist.getCell(indxReg);
     int dec = 0;
     for(int i = 0; i < 2; i++) {
         dec += pow(16, 1 - i) * int(l[i]);

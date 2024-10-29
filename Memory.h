@@ -9,8 +9,11 @@ private:
 public:
     string getCell(int address) {
         return memory[address];
-    };
+    }
     void setCell(int address, string val) {
         memory[address] = val;
-    };
+    }
+    void clearMemory() {
+        memory->clear();
+    }
 };
