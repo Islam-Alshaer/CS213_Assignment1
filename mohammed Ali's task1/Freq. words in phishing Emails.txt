@@ -1,0 +1,99 @@
+Account (5)
+
+
+Password (5)
+
+
+Login (5)
+
+
+Verify (5)
+
+
+Urgent (5)
+
+
+Alert (5)
+
+
+Payment (5)
+
+
+Security (5)
+
+
+Suspended (5)
+
+
+Update (5)
+
+
+Confirm (5)
+
+
+Failure (4)
+
+
+Blocked (4)
+
+
+Access (4)
+
+
+Notification (4)
+
+
+Request (4)
+
+
+
+
+Action (4)
+
+
+Error (4)
+
+
+Service (4)
+
+Confirm (4)
+
+
+Failure (3)
+
+
+Deactivated (3)
+
+
+
+
+Download (3)
+
+
+Support (3)
+
+
+Expired (3)
+
+
+Bank (3)
+
+
+Unusual (3)
+
+
+Failure (3)
+
+
+
+
+Authorize (2)
+
+
+Detected (2)
+
+
+Renew (2)
+
+
+Credentials (2)
