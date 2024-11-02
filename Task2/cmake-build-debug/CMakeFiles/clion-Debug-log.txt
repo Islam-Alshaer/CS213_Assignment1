@@ -1,0 +1,13 @@
+C:\Users\1way\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/1way/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S "E:\FCAI-islam\Level2\Semester-1\OOP\Assignments\Assignment 1\Task2" -B "E:\FCAI-islam\Level2\Semester-1\OOP\Assignments\Assignment 1\Task2\cmake-build-debug"
+-- Configuring done (0.5s)
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    chatgpt.cpp
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: main
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

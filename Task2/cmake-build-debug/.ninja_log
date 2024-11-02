@@ -1,0 +1,4 @@
+# ninja log v5
+0	550	7507111785139533	CMakeFiles/main.dir/main.cpp.obj	84201c268e4b5300
+4	656	7507111786196698	CMakeFiles/main.dir/Polynomial.cpp.obj	e8b4f5088e0161a2
+656	791	7507111787533128	main.exe	992c8e16043ede7
