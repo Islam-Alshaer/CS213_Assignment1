@@ -1,0 +1,4 @@
+C:\Users\1way\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/1way/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S "E:\FCAI-islam\Level2\Semester-1\OOP\Assignments\Assignment 1\volemachine\CS213_Assignment1\task 4 & 5" -B "E:\FCAI-islam\Level2\Semester-1\OOP\Assignments\Assignment 1\volemachine\CS213_Assignment1\task 4 & 5\cmake-build-debug"
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug
