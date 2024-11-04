@@ -2,7 +2,7 @@
 #include "Register.h"
 #include <map>
 #include <cmath>
-#include<iostream>
+#include <iostream>
 #include <algorithm>
 using namespace std;
 
