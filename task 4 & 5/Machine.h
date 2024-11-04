@@ -1,6 +1,4 @@
-
-#ifndef TASK3_MACHINE_H
-#define TASK3_MACHINE_H
+#pragma once
 #include "CPU.h"
 #include "iostream"
 using namespace std;
@@ -21,6 +19,3 @@ public:
     void run_single_step();
     void complete_execution();
 };
-
-
-#endif //TASK3_MACHINE_H

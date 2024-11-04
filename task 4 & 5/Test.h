@@ -1,5 +1,4 @@
-#ifndef TASK_4___5_TEST_H
-#define TASK_4___5_TEST_H
+#pragma once
 #include "Machine.h"
 #include "ALU.h"
 #include "CPU.h"
@@ -16,6 +15,3 @@ public:
 
 
 };
-
-
-#endif //TASK_4___5_TEST_H
