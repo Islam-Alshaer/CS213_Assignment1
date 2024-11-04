@@ -89,13 +89,13 @@ void ALU::bitwiseAND(int R, int S, int T) {
 
     for(int i = 0; i < 8; i++) {
         if(s[i] == t[i]) {
-            if(s[i] == '1')
+            if(s[i] == '1') {
                 r += s[i];
+                continue;
+            }
         }
-        else
-            r += "0";
+        r += "0";
     }
-
     r = binToHex(r);
     reg.setCell(R, r);
 }
