@@ -15,4 +15,5 @@ public:
     void move_from_register_R_to_S(int R, int S);
     void jump_to_instruction_in_address(int R, int memory_address, int & PC);
     void halt(int& PC);
+    void jump_to_instruction_in_address_D_Bonus_Version(int R, int memory_address, int &PC);
 };
