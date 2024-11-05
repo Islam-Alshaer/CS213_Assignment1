@@ -1,7 +1,10 @@
 #include "Register.h"
+#include "vector"
 
 Register::Register() {
-    fill(register_cells, register_cells + 16, "0");
+    for (int i = 0; i < 16; ++i) {
+        register_cells.push_back("00");
+    }
 }
 
 string Register::getCell(int address) const{

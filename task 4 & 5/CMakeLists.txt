@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.27)
+
 project(task_4___5)
 
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
+
 
 add_executable(ourvolemachine
 
@@ -25,12 +27,13 @@ add_executable(ourvolemachine
 
 )
 
-include(FetchContent)
+add_executable (test_running
+        Memory.cpp
+        Memory.h
+        Test.cpp
+        Test.h
+        test_running.cpp
+)
 
-FetchContent_Declare(googletest URL https://github.com/google/googletest/archive/refs/heads/main.zip)
 
-FetchContent_MakeAvailable(googletest)
-
-add_executable(volemachineTest Test.h Test.cpp)
-
-target_link_libraries(volemachineTest gtest gtest_main)
+add_executable(arbitarylab arbitarylab.cpp)

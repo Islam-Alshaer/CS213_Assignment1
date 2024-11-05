@@ -337,34 +337,34 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-build/googlemock
+gmock_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/googletest/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-src/googlemock
+gmock_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-build
+googletest-distribution_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/googletest
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-src
+googletest-distribution_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/googletest
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-build/googletest
+gtest_BINARY_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/googletest/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-src/googletest
+gtest_SOURCE_DIR:STATIC=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -526,7 +526,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -587,7 +587,7 @@ _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/task_4___5
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/_deps/googletest-build/googletest/generated
+generated_dir:INTERNAL=E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

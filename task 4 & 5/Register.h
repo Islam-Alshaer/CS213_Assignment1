@@ -5,7 +5,7 @@ using namespace std;
 
 class Register {
 private:
-    string register_cells[16];
+    vector<string> register_cells;
 public:
     Register();
     string getCell(int address) const;
