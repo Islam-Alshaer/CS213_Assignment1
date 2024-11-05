@@ -12,4 +12,10 @@ public:
     ALU(Memory &machine_memory, Register &machine_register);
     void add_twos_complement(int R, int S, int T);
     void add_float_representation(int R, int S, int T);
+    void bitwiseAND(int R, int S, int T);
+    void bitwiseXOR(int R, int S, int T);
+    string hexToBin(string hex);
+    string binToHex(string bin);
+    int hexToDec(string hex);
+    string decToHex(int dec);
 };

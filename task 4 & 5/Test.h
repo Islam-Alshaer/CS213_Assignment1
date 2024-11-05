@@ -1,5 +1,4 @@
-#ifndef TASK_4___5_TEST_H
-#define TASK_4___5_TEST_H
+#pragma once
 #include "Machine.h"
 #include "ALU.h"
 #include "CPU.h"
@@ -23,6 +22,3 @@ public:
     void test_clear_memory(int address, string value);
 
 };
-
-
-#endif //TASK_4___5_TEST_H

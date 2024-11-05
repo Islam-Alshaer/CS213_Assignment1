@@ -1,6 +1,4 @@
-#ifndef TASK3_MEMORY_H
-#define TASK3_MEMORY_H
-
+#pragma once
 #include <string>
 #include "vector"
 
@@ -16,6 +14,3 @@ public:
     void setCell(const int &address, string val);
     void clearMemory();
 };
-
-
-#endif //TASK3_MEMORY_H
