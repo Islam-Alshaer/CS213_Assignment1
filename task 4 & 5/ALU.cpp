@@ -273,6 +273,7 @@ void ALU::add_twos_complement(int R, int S, int T) {
     int content_of_T = stoi(machine_register->getCell(T),  nullptr, 16);
     int Adding_res = content_of_S + content_of_T ;
     string BinNum = Binarary(Adding_res);
+    binarary = "";
     BinNum = fiill(BinNum);
     string BinNumSemi = "";
     string BinNumFin = "";
@@ -297,7 +298,7 @@ void ALU::add_twos_complement(int R, int S, int T) {
     BinNumFin = invert_ans(BinNumFin);
     int BinFinHun = stoi(BinNumFin, nullptr,2);
     string final_Hex = Hexawawy(BinNumFin);
-
+    Hexanum = "";
     machine_register->setCell(R,final_Hex);
 }
 
@@ -310,10 +311,10 @@ void ALU::add_twos_complement(int R, int S, int T) {
 
 
 
-
 void ALU::add_float_representation(int R, int S, int T) {
-    int content_of_S = stoi(machine_register->getCell(S),  nullptr, 2);
-    int content_of_T = stoi(machine_register->getCell(T),  nullptr, 2);
+    int content_of_S = stoi(machine_register->getCell(S),  nullptr, 16);
+    int content_of_T = stoi(machine_register->getCell(T),  nullptr, 16);
+
     string content_of_S_bin = Binarary(content_of_S);
     binarary = "";
     content_of_S_bin = fiill(content_of_S_bin);
@@ -323,19 +324,23 @@ void ALU::add_float_representation(int R, int S, int T) {
     double Num_of_S = calculate_floating_point(content_of_S_bin);
     double Num_of_T = calculate_floating_point(content_of_T_bin);
     double Adding_res_Num = Num_of_S + Num_of_T;
+
     string res_sign;
     if (Adding_res_Num<0){
         res_sign = "1";
     }else{
         res_sign = "0";
     }
+
     Adding_res_Num = abs(Adding_res_Num);
-    int Adding_res_int = Adding_res_Num;
+    int Adding_res_int = (int)Adding_res_Num;
     string Left_Point_Side_bin = DecToBinforFloat[Adding_res_int];
     double Right_Point_side_dec = Adding_res_Num - Adding_res_int;
     string Right_Point_side_bin = convert_farction_bin(Right_Point_side_dec);
     string Mantissa = Left_Point_Side_bin + Right_Point_side_bin;
-    Mantissa = Mantissa.substr(0,4);
+    if(Mantissa.size() > 4){
+        Mantissa  = Mantissa.substr(1, 4);
+    }
     int Exponent;
     if (Left_Point_Side_bin[0] != '0'){
         Exponent = Left_Point_Side_bin.size();
@@ -345,8 +350,13 @@ void ALU::add_float_representation(int R, int S, int T) {
     Exponent += 4;
     string Exponent_bin = DecToBinforFloat[Exponent];
     string Fin_Adding_Ans = res_sign + Exponent_bin + Mantissa ;
-    string Hex_Fin_Adding_Ans = Fin_Adding_Ans.substr(0,4) + Fin_Adding_Ans.substr(4,4);
+    string firsthalf = "";
+    string sechalf = "";
+    firsthalf = decAndHexMap[Fin_Adding_Ans.substr(0,4)];
+    sechalf = decAndHexMap[Fin_Adding_Ans.substr(4,4)];
+    string Hex_Fin_Adding_Ans = firsthalf + sechalf;
     machine_register->setCell(R,Hex_Fin_Adding_Ans);
+
 }
 
 
@@ -363,6 +373,7 @@ void ALU::BitWise_OR(int R, int S, int T) {
     bin_T = fiill(bin_T);
     string FinStr_OR = Or_func(bin_S,bin_T);
     FinStr_OR = Hexawawy(FinStr_OR);
+    Hexanum = "";
     machine_register->setCell(R,FinStr_OR);
 }
 
@@ -384,5 +395,6 @@ void ALU::shift_the_content(int R, int X){
     string shifted;
     shifted = shift_func(content_of_R_str,X);
     shifted = Hexawawy(shifted);
+    Hexanum = "";
     machine_register->setCell(R,shifted);
 }

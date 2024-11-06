@@ -5,7 +5,7 @@ int get_memory_address(string IR);
 
 
 CPU::CPU(Memory &machine_memory):
-    cu(machine_memory, machine_register), alu(machine_memory, machine_register) {
+    cu(machine_memory, machine_register), alu(machine_memory, machine_register), pc(2){
 }
 
 void CPU::run_next_instruction(Memory memory) {
@@ -28,14 +28,17 @@ bool CPU::fetch(Memory &memory) {
         IR += memory.getCell(pc);
         pc++; //run next step
     }
-    if(not is_instruction_valid(IR) or pc > 255)
+
+    if(not is_instruction_valid(IR) or pc > 255){
+        IR.clear();
         return false;
+    }
     return true;
 }
 
-bool CPU::is_instruction_valid(string &instruction) {
-    regex patten("^[1-6BC]{1}[0-9A-F]{3}$");
-    if(regex_match(instruction, patten))
+bool CPU::is_instruction_valid(string instruction) {
+    regex pattern("^[1-9ABCD]{1}[0-9A-F]{3}$");
+    if(regex_match(instruction, pattern))
         return true;
     return false;
 }

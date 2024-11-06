@@ -39,7 +39,12 @@ public:
     void test_shift(string R_content, int shift_key, string expected);
     void test_twos_complement(string S_content, string T_content, string expected);
     void test_bitwise_XOR(string S_content, string T_content, string expected);
-    void test_bitwise_AND();
+    void test_bitwise_AND(string S_content, string T_content, string expected);
+    void test_float(string S_content, string T_content, string expected);
+
+    //CPU
+    void test_is_valid_instruction(string instruction, bool expected);
+
 };
 
 

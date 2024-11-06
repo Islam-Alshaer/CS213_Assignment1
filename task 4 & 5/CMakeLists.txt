@@ -8,23 +8,19 @@ include_directories(.)
 
 
 add_executable(ourvolemachine
-
-        ALU.cpp
-        ALU.h
-        CPU.cpp
-        CPU.h
-        CU.cpp
-        CU.h
         Machine.cpp
         Machine.h
-        main.cpp
         Memory.cpp
         Memory.h
         Register.cpp
         Register.h
-        Test.cpp
-        Test.h
-
+        CPU.cpp
+        CPU.h
+        CU.cpp
+        CU.h
+        ALU.cpp
+        ALU.h
+        main.cpp
 )
 
 add_executable (test_running
@@ -36,6 +32,8 @@ add_executable (test_running
         CU.h
         ALU.cpp
         ALU.h
+        CPU.cpp
+        CPU.h
         Test.cpp
         Test.h
         test_running.cpp
