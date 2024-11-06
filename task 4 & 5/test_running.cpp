@@ -55,6 +55,20 @@ int main(){
     test.test_bitwise_OR(7, 8,"23", "FF", "FF"); //FF with something
     test.test_bitwise_OR(7, 8,"34", "67", "77"); //normal test
 
+    test.test_shift("D5", 2, "75");
+    test.test_shift("A3 ", 3, "74");
+    test.test_shift("1F", 4, "F1");
+    test.test_shift("B6", 1, "5B");
+    test.test_shift("FF", 7, "FF");
+    test.test_shift("A5", 0, "A5");
+
+    test.test_twos_complement("2D", "14", "41");
+    test.test_twos_complement("F5", "0C", "01");
+    test.test_twos_complement("85", "08", "8D");
+    test.test_twos_complement("7F", "01", "80");
+    test.test_twos_complement("A2", "BD", "5F");
+
+
 
 
 }

@@ -180,3 +180,44 @@ void Test::test_bitwise_OR(int S, int T, string S_content, string T_content, str
     else
         log_test(false, testname);
 }
+
+
+void Test::test_shift(string R_content, int shift_key, string expected) {
+    //constructing needed objects
+    Register my_register;
+    Memory my_memory;
+    ALU alu(my_memory, my_register);
+
+    //doing test
+    int R = 3;
+    my_register.setCell(3, R_content);
+    alu.shift_the_content(3, shift_key);
+
+    //check
+    string testname = "test_shift_R:_" + R_content + "_shift_key:_" + to_string(shift_key) + "_expected:_" + expected;
+    if(my_register.getCell(3) == expected)
+        log_test(true, testname);
+    else
+        log_test(false, testname);
+
+}
+
+void Test::test_twos_complement(string S_content, string T_content, string expected) {
+    //constructing needed objects
+    Register my_register;
+    Memory my_memory;
+    ALU alu(my_memory, my_register);
+
+    //doing the test
+    my_register.setCell(6, S_content);
+    my_register.setCell(7, T_content);
+    alu.add_twos_complement(8, 6, 7);
+
+    //checking
+    string testname = "test_two_complement_S_content:_" + S_content + "_T_content:_" + T_content + "_expected:_" + expected;
+    if(my_register.getCell(8) == expected)
+        log_test(true, testname);
+    else
+        log_test(false, testname);
+
+}

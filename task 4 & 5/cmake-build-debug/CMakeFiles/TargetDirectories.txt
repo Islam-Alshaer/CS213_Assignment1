@@ -1,0 +1,5 @@
+E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/CMakeFiles/ourvolemachine.dir
+E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/CMakeFiles/test_running.dir
+E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/CMakeFiles/arbitarylab.dir
+E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

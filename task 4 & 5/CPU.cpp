@@ -75,24 +75,31 @@ void CPU::decode_and_excute() { // I am truly ashamed to make one function this 
             int T = stoi(to_string(IR[3]), 0, 16);
             alu.add_twos_complement(R, S, T);
         }
-        case '6': { //
+        case '6': { //float
             int S = stoi(to_string(IR[2]), 0, 16);
             int T = stoi(to_string(IR[3]), 0, 16);
             alu.add_float_representation(R, S, T);
         }
-        case '7': {
+        case '7': { // bitwise OR
             int S = stoi(to_string(IR[2]), 0, 16);
             int T = stoi(to_string(IR[3]), 0, 16);
             alu.BitWise_OR(R, S, T);
         }
         case '8': { //bitwise AND
-
+            int S = stoi(to_string(IR[2]), 0, 16);
+            int T = stoi(to_string(IR[3]), 0, 16);
+            alu.bitwiseAND(R, S, T);
         }
         case '9': { //bitwise XOR
-
+            int S = stoi(to_string(IR[2]), 0, 16);
+            int T = stoi(to_string(IR[3]), 0, 16);
+            alu.bitwiseXOR(R, S, T);
         }
         case 'A': { //Rotate
-
+            string string_rotation_key;
+            string_rotation_key += IR[3];
+            int rotation_key = stoi(string_rotation_key, 0, 16);
+            alu.shift_the_content(R, rotation_key);
         }
         case 'B': { //jump
             string string_memory_address = IR.substr(2);
@@ -100,8 +107,6 @@ void CPU::decode_and_excute() { // I am truly ashamed to make one function this 
             cu.jump_to_instruction_in_address(R, x, pc);
         }
         case 'C': { //halt
-            if(IR[1] != '0' or IR[2] != '0' or IR[3] != '0')
-                return;
             cu.halt(pc);
             throw runtime_error("halt execution");
         }

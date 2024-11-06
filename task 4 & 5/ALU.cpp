@@ -46,25 +46,6 @@ map<char, string> hexAndBinMap = {
     {'F', "1111"}
 };
 
-map<std::string, int> Bintodec4bits = {
-        {"0000", 0},
-        {"0001", 1},
-        {"0010", 2},
-        {"0011", 3},
-        {"0100", 4},
-        {"0101", 5},
-        {"0110", 6},
-        {"0111", 7},
-        {"1000", 8},
-        {"1001", 9},
-        {"1010", 10},
-        {"1011", 11},
-        {"1100", 12},
-        {"1101", 13},
-        {"1110", 14},
-        {"1111", 15}
-};
-
 map<std::string, int> Bintodec3bits = {
         {"000", 0},
         {"001", 1},
@@ -108,9 +89,10 @@ string Or_func(string strS,string strT){
     }
     return Or_str;
 }
+
 void ALU::bitwiseAND(int R, int S, int T) {
-    Register reg;
-    string r, s = reg.getCell(S), t = reg.getCell(T);
+
+    string r, s = machine_register->getCell(S), t = machine_register->getCell(T);
     s = hexToBin(s), t = hexToBin(t);
 
     for(int i = 0; i < 8; i++) {
@@ -123,12 +105,13 @@ void ALU::bitwiseAND(int R, int S, int T) {
         r += "0";
     }
     r = binToHex(r);
-    reg.setCell(R, r);
+    machine_register->setCell(R, r);
+
 }
 
 void ALU::bitwiseXOR(int R, int S, int T) {
-    Register reg;
-    string r, s = reg.getCell(S), t = reg.getCell(T);
+
+    string r, s = machine_register->getCell(S), t = machine_register->getCell(T);
     s = hexToBin(s), t = hexToBin(t);
 
     for(int i = 0; i < 8; i++) {
@@ -140,7 +123,7 @@ void ALU::bitwiseXOR(int R, int S, int T) {
     }
 
     r = binToHex(r);
-    reg.setCell(R, r);
+    machine_register->setCell(R, r);
 }
 
 string ALU::hexToBin(string hex) {
@@ -150,6 +133,7 @@ string ALU::hexToBin(string hex) {
     }
     return binary;
 }
+
 string ALU::binToHex(string bin) {
     string bin1 = bin.substr(0, 4), bin2 = bin.substr(3);
     for(auto i : hexAndBinMap) {

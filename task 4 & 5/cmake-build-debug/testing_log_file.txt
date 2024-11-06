@@ -24,3 +24,14 @@ test_ALU_S:7_12_T:_8_12: pass
 test_ALU_S:7_0_T:_8_FF: pass
 test_ALU_S:7_23_T:_8_FF: pass
 test_ALU_S:7_34_T:_8_67: pass
+test_shift_R:_D5_shift_key:_2_expected:_75: pass
+test_shift_R:_A3 _shift_key:_3_expected:_74: pass
+test_shift_R:_1F_shift_key:_4_expected:_F1: fail
+test_shift_R:_B6_shift_key:_1_expected:_5B: pass
+test_shift_R:_FF_shift_key:_7_expected:_FF: pass
+test_shift_R:_A5_shift_key:_0_expected:_A5: pass
+test_two_complement_S_content:_2D_T_content:_14_expected:_41: fail
+test_two_complement_S_content:_F5_T_content:_0C_expected:_01: fail
+test_two_complement_S_content:_85_T_content:_08_expected:_8D: fail
+test_two_complement_S_content:_7F_T_content:_01_expected:_80: fail
+test_two_complement_S_content:_A2_T_content:_BD_expected:_5F: fail
