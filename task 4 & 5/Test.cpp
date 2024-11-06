@@ -221,3 +221,24 @@ void Test::test_twos_complement(string S_content, string T_content, string expec
         log_test(false, testname);
 
 }
+
+void Test::test_bitwise_XOR(string S_content, string T_content, string expected) {
+
+    //constructing needed objects
+    Register my_register;
+    Memory my_memory;
+    ALU alu(my_memory, my_register);
+
+    //doing the test
+    my_register.setCell(6, S_content);
+    my_register.setCell(7, T_content);
+    alu.bitwiseXOR(8, 6, 7);
+
+    //checking
+    string testname = "test_bitwiseXOR_S_content:_" + S_content + "_T_content:_" + T_content + "_expected:_" + expected;
+    if(my_register.getCell(8) == expected)
+        log_test(true, testname);
+    else
+        log_test(false, testname);
+
+}

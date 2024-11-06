@@ -38,7 +38,8 @@ public:
     void test_bitwise_OR(int S, int T, string S_content, string T_content, string expected);
     void test_shift(string R_content, int shift_key, string expected);
     void test_twos_complement(string S_content, string T_content, string expected);
-
+    void test_bitwise_XOR(string S_content, string T_content, string expected);
+    void test_bitwise_AND();
 };
 
 

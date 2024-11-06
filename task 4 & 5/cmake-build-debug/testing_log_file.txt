@@ -35,3 +35,10 @@ test_two_complement_S_content:_F5_T_content:_0C_expected:_01: fail
 test_two_complement_S_content:_85_T_content:_08_expected:_8D: fail
 test_two_complement_S_content:_7F_T_content:_01_expected:_80: fail
 test_two_complement_S_content:_A2_T_content:_BD_expected:_5F: fail
+test_bitwiseXOR_S_content:_3A_T_content:_5C_expected:_66: fail
+test_bitwiseXOR_S_content:_7D_T_content:_4B_expected:_36: fail
+test_bitwiseXOR_S_content:_A2_T_content:_1F_expected:_BD: fail
+test_bitwiseXOR_S_content:_C9_T_content:_3E_expected:_F7: fail
+test_bitwiseXOR_S_content:_5F_T_content:_B4_expected:_EB: fail
+test_bitwiseXOR_S_content:_8E_T_content:_D1_expected:_5F: fail
+_D1_expected:_5F: fail

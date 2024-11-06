@@ -68,6 +68,12 @@ int main(){
     test.test_twos_complement("7F", "01", "80");
     test.test_twos_complement("A2", "BD", "5F");
 
+    test.test_bitwise_XOR("3A", "5C", "66");
+    test.test_bitwise_XOR("7D", "4B", "36");
+    test.test_bitwise_XOR("A2", "1F", "BD");
+    test.test_bitwise_XOR("C9", "3E", "F7");
+    test.test_bitwise_XOR("5F", "B4", "EB");
+    test.test_bitwise_XOR("8E", "D1", "5F");
 
 
 

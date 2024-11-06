@@ -111,13 +111,15 @@ void ALU::bitwiseAND(int R, int S, int T) {
 
 void ALU::bitwiseXOR(int R, int S, int T) {
 
-    string r, s = machine_register->getCell(S), t = machine_register->getCell(T);
-    s = hexToBin(s), t = hexToBin(t);
+    string r;
+    string s = machine_register->getCell(S);
+    string t = machine_register->getCell(T);
+    s = hexToBin(s);
+    t = hexToBin(t);
 
     for(int i = 0; i < 8; i++) {
-        if(s[i] == t[i]) {
+        if(s[i] == t[i])
             r += "0";
-        }
         else
             r += "1";
     }
@@ -135,7 +137,8 @@ string ALU::hexToBin(string hex) {
 }
 
 string ALU::binToHex(string bin) {
-    string bin1 = bin.substr(0, 4), bin2 = bin.substr(3);
+    string bin1 = bin.substr(0, 4);
+    string bin2 = bin.substr(3);
     for(auto i : hexAndBinMap) {
         if(i.second == bin1)
             bin1 = i.first;
