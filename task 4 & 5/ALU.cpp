@@ -67,6 +67,15 @@ map<int, std::string> DecToBinforFloat = {
         {7, "111"}
 };
 
+string shift_func(string Str_Bin , int X){
+    string Shifted_Str = "";
+    int remaining_size = 8-X ;
+    Shifted_Str += Str_Bin.substr(remaining_size,X);
+    Shifted_Str += Str_Bin.substr(0,remaining_size);
+
+
+    return Shifted_Str;
+}
 
 string Or_func(string strS,string strT){
     string Or_str = "";
@@ -282,4 +291,16 @@ void CU::jump_to_instruction_in_address_D(int R, int memory_address, int &PC) {
     if(register_cell_equals_register_0) {
         PC = memory_address;
     }
+}
+
+
+void ALU::shift_the_content(int R, int X){
+    int content_of_R = stoi(machine_register->getCell(R),  nullptr, 16);
+    string content_of_R_str = Binarary(content_of_R);
+    binarary = "";
+    content_of_R_str +=  fiill(content_of_R_str);
+    string shifted;
+    shifted = shift_func(content_of_R_str,X);
+    shifted = Hexawawy(shifted);
+    machine_register->setCell(R,shifted);
 }
