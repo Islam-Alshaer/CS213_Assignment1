@@ -5,15 +5,48 @@ using namespace std;
 int main(){
 
     Test test("testing_log_file.txt");
+    //memory tests
+
     //testing set_cell and get_cell all at once
     test.test_memory_set_cell(0, "AA");
-    test.test_memory_set_cell(15, "fn");
+    test.test_memory_set_cell(15, "FF");
     test.test_memory_set_cell(550, "00");
     //testing clear memory
     test.test_clear_memory(5, "FF");
     test.test_clear_memory(0, "45");
 
+    //register tests
 
+    //testing set cell
+    test.test_register_set_cell(0, "AA");
+    test.test_register_set_cell(12, "FF");
+    test.test_register_set_cell(235, "00");
+
+    //testing clear memory
+    test.test_clear_register(3, "C4");
+    test.test_clear_register(0, "BB");
+
+    //testing CU
+
+    //test first load function
+    test.test_cu_load1(4, "AA", 155, "15");
+    test.test_cu_load1(0, "A2", 0, "24");
+    test.test_cu_load1(15, "A2", 255, "00");
+
+    //test the other load function
+    test.test_cu_load2(0, "24", "44");
+    test.test_cu_load2(15, "FF", "00");
+    test.test_cu_load2(4, "48", "FF");
+
+    //test store
+    test.test_store(3, "32", 33, "65");
+    test.test_store(0, "00", 0, "FF"); //should cout 00
+    test.test_store(15, "FF", 255, "A3");
+
+    //test move
+    test.test_move(2, 3);
+    test.test_move(0, 15);
+    
 
 
 }

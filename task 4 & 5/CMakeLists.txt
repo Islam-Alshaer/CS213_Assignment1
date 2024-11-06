@@ -30,6 +30,12 @@ add_executable(ourvolemachine
 add_executable (test_running
         Memory.cpp
         Memory.h
+        Register.cpp
+        Register.h
+        CU.cpp
+        CU.h
+        ALU.cpp
+        ALU.h
         Test.cpp
         Test.h
         test_running.cpp

@@ -139,6 +139,27 @@ build CMakeFiles/test_running.dir/Memory.cpp.obj: CXX_COMPILER__test_running_uns
   OBJECT_DIR = CMakeFiles\test_running.dir
   OBJECT_FILE_DIR = CMakeFiles\test_running.dir
 
+build CMakeFiles/test_running.dir/Register.cpp.obj: CXX_COMPILER__test_running_unscanned_Debug E$:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment$ 1/volemachine/CS213_Assignment1/task$ 4$ &$ 5/Register.cpp || cmake_object_order_depends_target_test_running
+  DEP_FILE = CMakeFiles\test_running.dir\Register.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -I"E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/."
+  OBJECT_DIR = CMakeFiles\test_running.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_running.dir
+
+build CMakeFiles/test_running.dir/CU.cpp.obj: CXX_COMPILER__test_running_unscanned_Debug E$:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment$ 1/volemachine/CS213_Assignment1/task$ 4$ &$ 5/CU.cpp || cmake_object_order_depends_target_test_running
+  DEP_FILE = CMakeFiles\test_running.dir\CU.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -I"E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/."
+  OBJECT_DIR = CMakeFiles\test_running.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_running.dir
+
+build CMakeFiles/test_running.dir/ALU.cpp.obj: CXX_COMPILER__test_running_unscanned_Debug E$:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment$ 1/volemachine/CS213_Assignment1/task$ 4$ &$ 5/ALU.cpp || cmake_object_order_depends_target_test_running
+  DEP_FILE = CMakeFiles\test_running.dir\ALU.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -I"E:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment 1/volemachine/CS213_Assignment1/task 4 & 5/."
+  OBJECT_DIR = CMakeFiles\test_running.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_running.dir
+
 build CMakeFiles/test_running.dir/Test.cpp.obj: CXX_COMPILER__test_running_unscanned_Debug E$:/FCAI-islam/Level2/Semester-1/OOP/Assignments/Assignment$ 1/volemachine/CS213_Assignment1/task$ 4$ &$ 5/Test.cpp || cmake_object_order_depends_target_test_running
   DEP_FILE = CMakeFiles\test_running.dir\Test.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
@@ -161,7 +182,7 @@ build CMakeFiles/test_running.dir/test_running.cpp.obj: CXX_COMPILER__test_runni
 #############################################
 # Link the executable test_running.exe
 
-build test_running.exe: CXX_EXECUTABLE_LINKER__test_running_Debug CMakeFiles/test_running.dir/Memory.cpp.obj CMakeFiles/test_running.dir/Test.cpp.obj CMakeFiles/test_running.dir/test_running.cpp.obj
+build test_running.exe: CXX_EXECUTABLE_LINKER__test_running_Debug CMakeFiles/test_running.dir/Memory.cpp.obj CMakeFiles/test_running.dir/Register.cpp.obj CMakeFiles/test_running.dir/CU.cpp.obj CMakeFiles/test_running.dir/ALU.cpp.obj CMakeFiles/test_running.dir/Test.cpp.obj CMakeFiles/test_running.dir/test_running.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_running.dir

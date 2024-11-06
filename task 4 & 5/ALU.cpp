@@ -293,7 +293,7 @@ void ALU::BitWise_OR(int R, int S, int T) {
 
 
 
-void CU::jump_to_instruction_in_address_D_Bonus_Version(int R, int memory_address, int &PC) {
+void CU::jump_to_instruction_in_address_D(int R, int memory_address, int &PC) {
     bool register_cell_equals_register_0 = (machine_register->getCell(R) > machine_register->getCell(00) ); //could be a function also :)
     if(register_cell_equals_register_0) {
         PC = memory_address;

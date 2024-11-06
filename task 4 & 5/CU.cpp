@@ -7,10 +7,10 @@
 #include <regex>
 using namespace std;
 
-//constructor should intialize values for pointers for memory and register
-CU::CU(Memory &machine_memory, Register &machine_register) {
-    this->machine_memory = &machine_memory;
-    this->machine_register = &machine_register;
+//constructor should initialize values for pointers for memory and register
+CU::CU(Memory &given_memory, Register &given_register) {
+    machine_memory = &given_memory;
+    machine_register = &given_register;
 }
 
 //operation 1
@@ -41,7 +41,7 @@ void CU::move_from_register_R_to_S(int R, int S) {
 
 //operation B
 void CU::jump_to_instruction_in_address(int R, int memory_address, int &PC) {
-    bool register_cell_equals_register_0 = (machine_register->getCell(R) == machine_register->getCell(00) ); //could be a function also :)
+    bool register_cell_equals_register_0 = (machine_register->getCell(R) == machine_register->getCell(0) ); //could be a function also :)
     if(register_cell_equals_register_0) {
         PC = memory_address;
     }
@@ -49,10 +49,7 @@ void CU::jump_to_instruction_in_address(int R, int memory_address, int &PC) {
 
 //operation C
 void CU::halt(int& PC) {
-    machine_register->clearMemory();
+    machine_register->clearRegister();
     machine_memory->clearMemory();
     PC = 0;
 }
-
-
-

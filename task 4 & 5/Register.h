@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include "algorithm"
+#include "vector"
+
 using namespace std;
 
 class Register {
@@ -10,5 +11,5 @@ public:
     Register();
     string getCell(int address) const;
     void setCell(const int &address, const string &val);
-    void clearMemory();
+    void clearRegister();
 };

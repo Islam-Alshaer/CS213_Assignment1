@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEST_H
+#define TEST_H
 #include "Machine.h"
 #include "ALU.h"
 #include "CPU.h"
@@ -18,7 +19,25 @@ private:
     void log_test(bool pass, const string &testname);
 public:
     Test(const string &log_file_name);
+
+    //memory stuff
     void test_memory_set_cell(int address, string content);
     void test_clear_memory(int address, string value);
 
+    //register stuff
+    void test_register_set_cell(int address, string content);
+    void test_clear_register(int address, string value);
+
+    //control unit stuff
+    void test_cu_load1(int registeraddress, string register_value, int memoryaddress, string memory_value);
+    void test_cu_load2(int registeraddress, string valuebefore, string valueafter);
+    void test_store(int registeraddress, string register_value, int memoryaddress, string memory_value);
+    void test_move(int R,  int S);
+
+    //ALU
+
+
 };
+
+
+#endif //TEST_H

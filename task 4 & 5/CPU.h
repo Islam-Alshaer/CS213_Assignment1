@@ -9,7 +9,7 @@ using namespace std;
 
 class CPU {
 private:
-    int programCounter = 0;
+    int programCounter = 2;
     int& pc = programCounter;
     string IR;
     Register machine_register;
