@@ -138,7 +138,7 @@ string ALU::hexToBin(string hex) {
 
 string ALU::binToHex(string bin) {
     string bin1 = bin.substr(0, 4);
-    string bin2 = bin.substr(3);
+    string bin2 = bin.substr(4);
     for(auto i : hexAndBinMap) {
         if(i.second == bin1)
             bin1 = i.first;
