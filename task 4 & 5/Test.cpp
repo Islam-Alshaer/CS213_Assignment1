@@ -159,3 +159,24 @@ void Test::test_move(int R, int S) {
         log_test(true, test_name);
 
 }
+
+
+void Test::test_bitwise_OR(int S, int T, string S_content, string T_content, string expected) {
+    //constructing needed objects
+    Register my_register;
+    Memory my_memory;
+    ALU alu(my_memory, my_register);
+
+    //doing test
+    my_register.setCell(S,  S_content);
+    my_register.setCell(T, T_content);
+    int R = 8;
+    alu.BitWise_OR(8, S, T);
+
+    //checking
+    string testname = "test_ALU_S:" + to_string(S) + '_' + S_content + "_T:_" + to_string(T) + '_' + T_content;
+    if(my_register.getCell(R) == expected)
+        log_test(true, testname);
+    else
+        log_test(false, testname);
+}

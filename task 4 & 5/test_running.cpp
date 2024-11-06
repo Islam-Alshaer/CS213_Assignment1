@@ -40,13 +40,21 @@ int main(){
 
     //test store
     test.test_store(3, "32", 33, "65");
-    test.test_store(0, "00", 0, "FF"); //should cout 00
+    test.test_store(0, "00", 0, "FF"); //should print 00
     test.test_store(15, "FF", 255, "A3");
 
     //test move
     test.test_move(2, 3);
     test.test_move(0, 15);
-    
+
+
+    //testing ALU
+    test.test_bitwise_OR(0, 1,"A1", "AA", "AB"); //normal
+    test.test_bitwise_OR(7, 8,"12", "12", "12"); //number with itself
+    test.test_bitwise_OR(7, 8,"0", "FF", "FF"); //0 with something
+    test.test_bitwise_OR(7, 8,"23", "FF", "FF"); //FF with something
+    test.test_bitwise_OR(7, 8,"34", "67", "77"); //normal test
+
 
 
 }

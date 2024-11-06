@@ -51,5 +51,5 @@ void CU::jump_to_instruction_in_address(int R, int memory_address, int &PC) {
 void CU::halt(int& PC) {
     machine_register->clearRegister();
     machine_memory->clearMemory();
-    PC = 0;
+    PC = 2;
 }

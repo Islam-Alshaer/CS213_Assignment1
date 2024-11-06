@@ -10,3 +10,17 @@
 21	2692	7524520547716987	CMakeFiles/test_running.dir/CPU.cpp.obj	ae5cd0d1cfa2bd9a
 884	1005	7525319038686747	test_running.exe	f0e8e06a3423fb37
 356	455	7524519371807349	arbitarylab.exe	d1d955807720f181
+10	740	7526043230196580	CMakeFiles/test_running.dir/Memory.cpp.obj	7c976bb2e23f9255
+36	746	7526043230266282	CMakeFiles/test_running.dir/test_running.cpp.obj	c3e213815342a009
+21	747	7526043230276263	CMakeFiles/test_running.dir/Register.cpp.obj	37b1bf5b04f9fb8c
+16	769	7526043230495661	CMakeFiles/test_running.dir/Test.cpp.obj	fac635bde586c93
+4	1142	7526043234245628	CMakeFiles/test_running.dir/CU.cpp.obj	20d339069230b55c
+27	1146	7526043234265577	CMakeFiles/test_running.dir/ALU.cpp.obj	70ec4256ba096e43
+1146	1476	7526043237546797	test_running.exe	3381b87f58ea0d02
+4	521	7526046056088313	CMakeFiles/test_running.dir/Memory.cpp.obj	7c976bb2e23f9255
+8	530	7526046056188047	CMakeFiles/test_running.dir/Register.cpp.obj	37b1bf5b04f9fb8c
+24	643	7526046057325006	CMakeFiles/test_running.dir/test_running.cpp.obj	c3e213815342a009
+20	683	7526046057733907	CMakeFiles/test_running.dir/Test.cpp.obj	fac635bde586c93
+16	824	7526046059150119	CMakeFiles/test_running.dir/CU.cpp.obj	20d339069230b55c
+12	1008	7526046060965257	CMakeFiles/test_running.dir/ALU.cpp.obj	70ec4256ba096e43
+1008	1191	7526046062760457	test_running.exe	3381b87f58ea0d02

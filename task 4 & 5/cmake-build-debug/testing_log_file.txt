@@ -17,3 +17,10 @@ test_cu_load_with_value_4_48_FF: pass
 test_store_3_32_33_65: pass
 test_store_0_00_0_FF: pass
 test_store_15_FF_255_A3: pass
+test_move: pass
+test_move: pass
+test_ALU_S:0_A1_T:_1_AA: pass
+test_ALU_S:7_12_T:_8_12: pass
+test_ALU_S:7_0_T:_8_FF: pass
+test_ALU_S:7_23_T:_8_FF: pass
+test_ALU_S:7_34_T:_8_67: pass

@@ -50,33 +50,51 @@ void CPU::decode_and_excute() { // I am truly ashamed to make one function this 
 
     switch (operation_code) {
 
-        case '1' : {
+        case '1' : { //load with value in
             int memory_address = get_memory_address(IR);
             cu.Load_register_with_value_in(R, memory_address);
         }
-        case '2': {
+        case '2': { //load with value
             string value = IR.substr(2);
             cu.Load_register_with_value(R, value);
         }
-        case '3': {
+        case '3': { // store
             string string_memory_address = IR.substr(2);
             int x = stoi(string_memory_address, 0, 16);
             cu.store_content_of_R_in_memory_address_X(R, x);
         }
-        case '4': {
+        case '4': { //move
             if(IR[1] != '0')
                 return;
             R = stoi(to_string(IR[2]), 0, 16); // very counterintuitive, but it's proffessor's fault :)
             int S = stoi(to_string(IR[3]), 0, 16);
             cu.move_from_register_R_to_S(R, S);
         }
-        case '5': { //TODO : mr.y3zof
+        case '5': { //two's complement
+            int S = stoi(to_string(IR[2]), 0, 16);
+            int T = stoi(to_string(IR[3]), 0, 16);
+            alu.add_twos_complement(R, S, T);
+        }
+        case '6': { //
+            int S = stoi(to_string(IR[2]), 0, 16);
+            int T = stoi(to_string(IR[3]), 0, 16);
+            alu.add_float_representation(R, S, T);
+        }
+        case '7': {
+            int S = stoi(to_string(IR[2]), 0, 16);
+            int T = stoi(to_string(IR[3]), 0, 16);
+            alu.BitWise_OR(R, S, T);
+        }
+        case '8': { //bitwise AND
 
         }
-        case '6': { //TODO : mr.y3zof
+        case '9': { //bitwise XOR
 
         }
-        case 'B': {
+        case 'A': { //Rotate
+
+        }
+        case 'B': { //jump
             string string_memory_address = IR.substr(2);
             int x = stoi(string_memory_address, 0, 16);
             cu.jump_to_instruction_in_address(R, x, pc);

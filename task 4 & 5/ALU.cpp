@@ -260,34 +260,18 @@ void ALU::add_float_representation(int R, int S, int T) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void ALU::BitWise_OR(int R, int S, int T) {
-    int content_of_S = stoi(machine_register->getCell(S),  nullptr, 16);
-    int content_of_T = stoi(machine_register->getCell(T),  nullptr, 16);
-    string bin_S = Binarary(content_of_S);
+    int decimalcontent_of_S = stoi(machine_register->getCell(S), nullptr, 16);
+    int decimalcontent_of_T = stoi(machine_register->getCell(T), nullptr, 16);
+
+    string bin_S = Binarary(decimalcontent_of_S);
     binarary="";
     bin_S = fiill(bin_S);
-    string bin_T = Binarary(content_of_T);
+    string bin_T = Binarary(decimalcontent_of_T);
     binarary="";
     bin_T = fiill(bin_T);
     string FinStr_OR = Or_func(bin_S,bin_T);
     FinStr_OR = Hexawawy(FinStr_OR);
-    cout << FinStr_OR;
     machine_register->setCell(R,FinStr_OR);
 }
 

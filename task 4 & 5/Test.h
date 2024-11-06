@@ -35,7 +35,7 @@ public:
     void test_move(int R,  int S);
 
     //ALU
-
+    void test_bitwise_OR(int S, int T, string S_content, string T_content, string expected);
 
 };
 
