@@ -14,7 +14,7 @@ Machine::Machine() : memory(), processor(memory){
 
 void Machine::load_file_into_memory(ifstream program_file) {
     const int max_instructions = 256 / 2;
-    int number_of_instructions{0};
+    int number_of_instructions{2};
     string instruction;
 
     while(program_file >> instruction){
@@ -26,7 +26,7 @@ void Machine::load_file_into_memory(ifstream program_file) {
 }
 
 void Machine::store_instruction(string &instruction){
-    static int current_cell = 0;
+    static int current_cell = 2;
     for (int i = 0; i < instruction.length(); i += 2) {
         string one_byte(""); //one byte is two hexadicimal digits
 
@@ -41,7 +41,15 @@ void Machine::store_instruction(string &instruction){
 
 void Machine::complete_execution() {
     while(true){
-        processor.run_next_instruction(memory);
+        try{
+            processor.run_next_instruction(memory);
+        }
+        catch (exception &e){
+            const char* haltmessage = "halt execution";
+            const char* offboundries = "out of boundries";
+            if(strcmp(haltmessage, e.what()) == 0 or strcmp(offboundries, e.what()) == 0)
+                break;
+        }
     }
 
 }

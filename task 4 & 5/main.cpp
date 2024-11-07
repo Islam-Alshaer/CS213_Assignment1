@@ -14,7 +14,7 @@ using namespace std;
 void display_choices(){ //a screaming violation of the open closed principle
     cout << "choose one of the following choices : " << endl;
     cout << "1.load a new program from a file" << endl;
-    cout << "2.run a sinle step" << endl;
+    cout << "2.run a single step" << endl;
     cout << "3.display status of memory and registers" << endl;
     cout << "4.complete execution" << endl;
     cout << "5.turn off the machine" << endl;
