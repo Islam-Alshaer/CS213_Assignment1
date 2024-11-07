@@ -14,23 +14,22 @@ using namespace std;
 void display_choices(){ //a screaming violation of the open closed principle
     cout << "choose one of the following choices : " << endl;
     cout << "1.load a new program from a file" << endl;
-    cout << "2.execute file" << endl;
-    cout << "3.display status of PC, IR, memory, and registers" << endl;
+    cout << "2.run a sinle step" << endl;
+    cout << "3.display status of memory and registers" << endl;
     cout << "4.complete execution" << endl;
     cout << "5.turn off the machine" << endl;
 }
 
 char minue() {
 
-    cout << "welcome to our vole machine simulator" << endl;
     display_choices();
     string choice;
     cin >> choice;
-    bool is_valid_choice = ( (choice.length() == 1) and (choice[0] <= '4') and (choice[0] >= '1') );
+    bool is_valid_choice = ( (choice.length() == 1) and (choice[0] <= '5') and (choice[0] >= '1') );
     while (not is_valid_choice){
         display_choices();
         cin >> choice;
-        is_valid_choice = ( (choice.length() == 1) and (choice[0] <= '4') and (choice[0] >= '1') );
+        is_valid_choice = ( (choice.length() == 1) and (choice[0] <= '5') and (choice[0] >= '1') );
     }
     return choice[0];
 }
@@ -61,11 +60,10 @@ ifstream choice1(){
 
 
 int main(void){
-
+    cout << "welcome to our vole machine simulator" << endl;
+    Machine volemachine;
     bool is_a_file_loaded = false;
     while(true){
-
-        Machine volemachine;
         char choice = minue();
         if(choice == '1'){
             volemachine.load_file_into_memory(choice1());

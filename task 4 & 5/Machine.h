@@ -11,7 +11,7 @@ private:
     Memory memory;
     void print_register() const;
     void print_memory() const;
-    void store_instruction(string &insturction);
+    void store_instruction(string &instruction);
 public:
     Machine();
     void load_file_into_memory(ifstream program_file);

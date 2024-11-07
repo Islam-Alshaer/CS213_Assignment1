@@ -10,7 +10,10 @@ CPU::CPU(Memory &machine_memory):
 
 void CPU::run_next_instruction(Memory memory) {
     if(not fetch(memory)){ //sorry for this bad code practice, this actually means fetch and check if it's done correctly
-        throw runtime_error("instruction is not valid, could not fetch");
+        if(pc > 255)
+            throw runtime_error("out of boundries");
+        else
+            throw runtime_error("instruction is not valid, could not fetch");
     }
     else{ //that means we have already fetched
         try{
@@ -33,6 +36,7 @@ bool CPU::fetch(Memory &memory) {
         IR.clear();
         return false;
     }
+    IR.clear();
     return true;
 }
 
